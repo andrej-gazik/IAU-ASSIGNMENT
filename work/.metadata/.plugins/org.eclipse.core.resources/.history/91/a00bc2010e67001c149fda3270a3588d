@@ -1,0 +1,6 @@
+package Models;
+
+public interface CipherStrategy {
+	public String doCipher(String a) throws Exception;
+	public String doDecipherCipher(String a) throws Exception;
+}

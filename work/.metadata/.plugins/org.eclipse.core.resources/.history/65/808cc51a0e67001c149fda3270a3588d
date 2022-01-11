@@ -1,0 +1,29 @@
+package Models;
+
+public class Ciphers {
+	private CipherStrategy type_of_cipher;
+	
+	public Ciphers(CipherStrategy type_of_cipher) {
+		this.type_of_cipher = type_of_cipher;
+	}
+	
+	public String executeCipher(String cipher){
+		try {
+			return type_of_cipher.doCipher(cipher);
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return null;
+	}
+	
+	public String executeDecipherCipher(String cipher){
+		try {
+			return type_of_cipher.doDecipherCipher(cipher);
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return null;
+	}
+}
